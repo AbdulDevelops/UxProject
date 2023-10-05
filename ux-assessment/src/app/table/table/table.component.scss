@@ -1,0 +1,45 @@
+
+/* h1{
+background-color:green;
+color: white;
+width: 8%;
+} */
+// Add this styling to your component's SCSS file (e.g., table-component.component.scss)
+
+h1 {
+  font-size: 24px;
+width: 10%;
+  display: flex;
+  align-items: center;
+background-color:#6ebe71;
+margin-left: 25px;
+
+
+  mat-icon {
+    font-size: 20px;
+    margin-left: 40px;
+    cursor: pointer;
+    transition: color 0.2s;
+
+    &:hover {
+      color: #caff1d; // Change the color on hover to your desired color
+    }
+  }
+}
+.mat-icon {
+  margin-left: 25px;
+  -webkit-user-select: none;
+  user-select: none;
+  background-repeat: no-repeat;
+  display: inline-block;
+  fill: currentColor;
+  height: 24px;
+  width: 24px;
+  overflow: hidden;
+}
+.mat-icon:hover {
+  color: #0ba035; // Change the color on hover to your desired color
+}
+
+
+

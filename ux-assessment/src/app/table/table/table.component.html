@@ -1,0 +1,40 @@
+
+<!-- <h1>Berufvorschläge</h1>
+<div *ngIf="warningText">
+  <i class="fas fa-exclamation-triangle"></i>  FontAwesome warning icon
+</div>
+
+<div *ngIf="infoText; else showTextB">
+  <p>{{infoText}}</p>
+</div>
+<ng-template #showTextB>
+  <p>{{warningText}}</p>
+</ng-template>
+
+
+<button class="btn btn-success" *ngIf="infoText" (click)="onClickInfo()">
+  <span class='material-icons'>report_problem</span></button>
+
+<button class="btn btn-success" *ngIf="warningText" (click)="onClickInfo()">
+  <span class='material-icons'>pageview</span></button> -->
+
+  <div>
+    <h1>Berufsvorschläge</h1>
+  </div>
+  <div>
+      <mat-icon title="Bitte betrachte die Vorschläge nur als Anregung, scrolle gerne nach unten um weitere Ergebnisse zu finden. Noch wurden nicht alle in Deutschland anerkannten Ausbildungen und Berufen eingestuft. Die Datenbasis für die Errechnung wird durch die Nutzung jedoch laufend verbessert. Du hilfst uns, wenn Du zu den Top 10 oder 20 Vorschlägen bei jedem einzelnen Beruf auf („Mag ich nicht“) klickst wenn dieser nicht passt. Die Berufe die Du dir gut vorstellen kannst, bitte mit („Mag ich“) als Favorit markieren."
+      (mouseover)="showInfoIcon = true" (mouseout)="showInfoIcon = false">info</mat-icon>
+      <mat-icon title="Du hast den Fragebogen noch nicht komplett ausgefüllt. Die hier angezeigten Berufsvorschläge berücksichtigen nur Deine bisherigen Antworten und sind vermutlich noch nicht optimal."
+      (mouseover)="showWarningIcon = true" (mouseout)="showWarningIcon = false">warning</mat-icon>
+
+      <!-- Your table component content goes here -->
+
+    <div *ngFor="let jobs of dataSource">
+      <app-card [card]="jobs"></app-card>
+    </div>
+
+  </div>
+
+
+
+
